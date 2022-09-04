@@ -26,7 +26,7 @@ To bring more attention to the need for a new release refer to
 
 ## Usage
 
-Add the following lines to you `setup.cfg` to enable python 3.10 support
+Add the following lines to your `setup.cfg` to enable python 3.10 support
 
 ```python
 [options]
