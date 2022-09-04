@@ -61,7 +61,7 @@ setup(
             'qtsass = qtsass.cli:main'
         ]
     },
-    classifiers=(
+    classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -77,7 +77,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Build Tools',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ),
+    ],
     install_requires=[
         'libsass',
     ],
