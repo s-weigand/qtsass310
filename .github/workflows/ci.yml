@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false 
       matrix:
-        PYTHON_VERSION: ['2.7', '3.5', '3.10']
+        PYTHON_VERSION: ['2.7', '3.6', '3.10']
     steps:
       - name: Checkout branch
         uses: actions/checkout@v1
@@ -108,7 +108,7 @@ jobs:
     strategy:
       fail-fast: false 
       matrix:
-        PYTHON_VERSION: ['2.7', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10']
+        PYTHON_VERSION: ['2.7', '3.6', '3.7', '3.8', '3.9', '3.10']
     steps:
       - name: Checkout branch
         uses: actions/checkout@v1
@@ -149,7 +149,7 @@ jobs:
     strategy:
       fail-fast: false 
       matrix:
-        PYTHON_VERSION: ['2.7', '3.5', '3.6', '3.7', '3.8', '3.9', '3.10']
+        PYTHON_VERSION: ['2.7', '3.6', '3.7', '3.8', '3.9', '3.10']
     steps:
       - name: Checkout branch
         uses: actions/checkout@v1
