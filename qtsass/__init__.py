@@ -23,6 +23,7 @@ from __future__ import absolute_import
 
 # Standard library imports
 import logging
+from warnings import warn
 
 # Local imports
 from qtsass.api import (
@@ -32,6 +33,7 @@ from qtsass.api import (
     enable_logging,
     watch,
 )
+warn(UserWarning("'qtsass310' is deprecated, use 'qtsass>=0.3.1' instead."))
 
 
 # yapf: enable
@@ -41,7 +43,7 @@ logging.getLogger(__name__).addHandler(logging.NullHandler())
 enable_logging()
 
 # Constants
-__version__ = '0.3.1'
+__version__ = '0.3.1.post0'
 
 
 def _to_version_info(version):
