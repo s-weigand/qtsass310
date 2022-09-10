@@ -3,10 +3,10 @@ name: Tests
 on:
   # This avoids having duplicate builds for a pull request
   push:
-    tags:
-      - v**
-    branches:
-      - master
+    # tags:
+    #   - v**
+    # branches:
+    #   - master
   pull_request:
     branches:
       - master
@@ -181,7 +181,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+    # if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
     needs: [windows, macos, linux]
     steps:
       - uses: actions/checkout@v3
@@ -197,8 +197,8 @@ jobs:
           python setup.py sdist bdist_wheel
           twine check dist/*
 
-      - name: Publish package
-        uses: pypa/gh-action-pypi-publish@v1.5.1
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_password }}
+      # - name: Publish package
+      #   uses: pypa/gh-action-pypi-publish@v1.5.1
+      #   with:
+      #     user: __token__
+      #     password: ${{ secrets.pypi_password }}
